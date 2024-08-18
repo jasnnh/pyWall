@@ -9,4 +9,5 @@ the idea of a SYN Flood and DDOS attack is a barrage/spam of packets and to prev
 
 In this example I blocked port 80 (HTTP) for incoming connections and IP 127.0.0.1
 
+![image](https://github.com/jasnnh/pyWall/blob/main/image.png)
 
