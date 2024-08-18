@@ -8,6 +8,8 @@ import hashlib
 import codecs
 codecs.register_error("strict", codecs.ignore_errors)
 
+LAN_IP = "192.168.1.179"
+
 #now we will Create and configure logger 
 logging.basicConfig(filename="std.log", 
 					format='%(asctime)s %(message)s', 
@@ -29,7 +31,7 @@ SYN_PACKET_COUNT = 100  # max {syn}  packet allowed from a certain ip
 pcap = PydivertWriter("firewall_log.pcap", sync=True, append=True)
 
 
-def synorg(w, packet):
+def syn(w, packet):
     packet_ip = packet.src_addr
     
     print(f"[SYN PACKET] FROM {packet_ip} DST ADDRESS: {packet.dst_addr}")
